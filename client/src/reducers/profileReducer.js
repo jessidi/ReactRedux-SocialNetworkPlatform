@@ -30,17 +30,18 @@ const profileReducer = (state = initialState, action) => {
         profile: action.payload,
         loading: false
       };
-    case CLEAR_CURRENT_PROFILE:
-      return {
-        ...state,
-        profile: null
-      };
     case GET_PROFILES:
       return {
         ...state,
         profiles: action.payload,
         loading: false
       };
+    case CLEAR_CURRENT_PROFILE:
+      return {
+        ...state,
+        profile: null
+      };
+
     default:
       return state;
   }
